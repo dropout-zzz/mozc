@@ -31,7 +31,7 @@ Detailed differences between Google Japanese Input and Mozc are described in [Ab
 Build Instructions
 ------------------
 
-* [How to build Mozc in Docker](docs/build_mozc_in_docker.md): Android, NaCl, and Linux desktop builds.
+* [How to build Mozc in Docker](docs/build_mozc_in_docker.md): Android and Linux desktop builds.
 * [How to build Mozc in OS X](docs/build_mozc_in_osx.md): OS X build.
 * [How to build Mozc in Windows](docs/build_mozc_in_windows.md): Windows build.
 

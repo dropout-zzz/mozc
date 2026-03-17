@@ -35,8 +35,6 @@ RUN dnf -y update
 RUN dnf install -y clang libstdc++-static python git curl bzip2 unzip which
 ## Packages for linux desktop version
 RUN dnf install -y ibus-devel glib2-devel qt5-qtbase-devel gtk2-devel libxcb-devel
-## Packages for NaCl
-RUN dnf install -y glibc.i686
 ## For emacsian
 RUN dnf install -y emacs
 
@@ -44,14 +42,8 @@ ENV HOME /home/mozc_builder
 RUN useradd --create-home --shell /bin/bash --base-dir /home mozc_builder
 USER mozc_builder
 
-# SDK setup
 RUN mkdir -p /home/mozc_builder/work
 WORKDIR /home/mozc_builder/work
-
-## NaCl SDK
-RUN curl -LO http://storage.googleapis.com/nativeclient-mirror/nacl/nacl_sdk/nacl_sdk.zip && unzip nacl_sdk.zip && rm nacl_sdk.zip
-RUN cd nacl_sdk && ./naclsdk install pepper_49
-ENV NACL_SDK_ROOT /home/mozc_builder/work/nacl_sdk/pepper_49
 
 ## depot_tools for Ninja prebuilt
 RUN git clone https://chromium.googlesource.com/chromium/tools/depot_tools.git

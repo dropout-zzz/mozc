@@ -2,7 +2,7 @@ How to build Mozc in Docker
 ===========================
 
 # Introduction
-Docker containers are available to build Mozc binaries for Android, NaCl, and Linux desktop.
+Docker containers are available to build Mozc binaries for Android and Linux desktop.
 
 # System Requirements
 Currently, only Ubuntu 14.04 is tested to host the Docker container to build Mozc. See [official document](https://docs.docker.com/engine/installation/linux/docker-ce/ubuntu/) to set up Docker for Ubuntu 14.04.
@@ -38,13 +38,6 @@ Before explaining detailed build configurations and options, let's walk through 
 ```
 python build_mozc.py gyp --target_platform=Android
 python build_mozc.py build -c Debug android/android.gyp:apk
-```
-
-### Build Mozc for NaCl:
-
-```
-python build_mozc.py gyp --target_platform=NaCl --nacl_sdk_root=$NACL_SDK_ROOT
-python build_mozc.py build -c Release chrome/nacl/nacl_extension.gyp:nacl_mozc
 ```
 
 ### Build Mozc for Linux Desktop:
@@ -93,7 +86,6 @@ Here we show some notable options.
 You can use `--target_platform` option to specify the target OS on which Mozc will run.  Following options are available.
 
   * `Android`
-  * `NaCl`
   * `Linux` (default)
 
 If you don't specify this option, `--target_platform=Linux` will be used implicitly.
