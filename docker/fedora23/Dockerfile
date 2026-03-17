@@ -46,7 +46,10 @@ RUN mkdir -p /home/mozc_builder/work
 WORKDIR /home/mozc_builder/work
 
 ## depot_tools for Ninja prebuilt
-RUN git clone https://chromium.googlesource.com/chromium/tools/depot_tools.git
+RUN git init depot_tools
+RUN git -C depot_tools remote add origin https://chromium.googlesource.com/chromium/tools/depot_tools.git
+RUN git -C depot_tools fetch origin f438ff743a4b157b9be8cecefa7a170f9695d185
+RUN git -C depot_tools checkout FETCH_HEAD
 ENV PATH $PATH:/home/mozc_builder/work/depot_tools
 
 # check out Mozc source with submodules
