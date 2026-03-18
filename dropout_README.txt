@@ -4,6 +4,10 @@ this is a tree trying to make the old ver buildable again
 
 other changes may come in future and if so ill add it to this document
 
+so far they're:
+ * bumping targetSdk to Android 7 (no other code change required)
+   tested to install and work just fine on Android 16
+
 note that the fdroid packaging and archlinux `fcitx5-mozc` packaging included "not really FOSS licensed" zipcode dictionary files, however these are actually free to redistribute and modify
 moreover these dictionaries are not useful unless you live in japan, IMO
 
