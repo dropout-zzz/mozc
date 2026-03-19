@@ -30,6 +30,8 @@ sudo docker run --interactive --tty --rm $USER/mozc_fedora23
 ### Hint
 Don't forget to rebuild Docker container when Dockerfile is updated.
 
+Also, you should get latest source code updates using `git pull` in the container, before starting any build.
+
 # Build in the container
 Before explaining detailed build configurations and options, let's walk through the simplest cases to see how it looks like.
 
