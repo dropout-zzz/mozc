@@ -62,3 +62,39 @@ for the gplay ver, google later added better theme support and revamped ui, and 
 the theme stuff looks the same as in gboard, and similar to what is already implemented in Fcitx5-Android today
 
 ---
+
+it is possible to use georgewfraser/java-language-server to provide code completion for development
+this is tested within KDE Kate
+
+build the project first and add these jars into classpath:
+
+  ./src/android/libs/android-support-v13.jar
+  ./src/android/libs/guava.jar
+  ./src/android/libs/jsr305.jar
+  ./src/android/libs/protobuf-java.jar
+
+(also android.jar from android sdk)
+
+you also need some generated source files
+
+in ./src/android/resources/gen, grab these:
+
+  org/mozc/android/inputmethod/japanese/resources/R.java
+  org/mozc/android/inputmethod/japanese/resources/BuildConfig.java
+
+in ./src/android/gen, grab these:
+
+  org/mozc/android/inputmethod/japanese/R.java
+  org/mozc/android/inputmethod/japanese/BuildConfig.java
+  org/mozc/android/inputmethod/japanese/protobuf/ProtoEngineBuilder.java
+  org/mozc/android/inputmethod/japanese/protobuf/ProtoCandidates.java
+  org/mozc/android/inputmethod/japanese/protobuf/ProtoCommands.java
+  org/mozc/android/inputmethod/japanese/protobuf/ProtoConfig.java
+  org/mozc/android/inputmethod/japanese/protobuf/ProtoUserDictionaryStorage.java
+  org/mozc/android/inputmethod/japanese/SymbolData.java
+  org/mozc/android/inputmethod/japanese/EmoticonData.java
+  org/mozc/android/inputmethod/japanese/emoji/EmojiData.java
+
+simply copy those files into your src/android/src
+
+---
