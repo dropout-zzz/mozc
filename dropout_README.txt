@@ -8,6 +8,15 @@ so far they're:
  * bumping targetSdk to Android 7 (no other code change required)
    tested to install and work just fine on Android 16
 
+todo list, some are non-trivial:
+ * bump target api to even higher
+ * modernize build system and migrate to androidx
+ * bump dependencies
+ * remove jar binaries in tree
+ * sync mozc and dict updates from upstream
+ * update emoji and kaomoji tables
+ * material 3
+
 note that the fdroid packaging and archlinux `fcitx5-mozc` packaging included "not really FOSS licensed" zipcode dictionary files, however these are actually not copyrighted, free to redistribute and modify
 moreover these dictionaries are not useful unless you live in japan, IMO
 
