@@ -37,6 +37,8 @@ RUN dnf install -y clang libstdc++-static python git curl bzip2 unzip which
 RUN dnf install -y ibus-devel glib2-devel qt5-qtbase-devel gtk2-devel libxcb-devel
 ## For emacsian
 RUN dnf install -y emacs
+## For sane people
+RUN dnf install -y nano
 
 ENV HOME /home/mozc_builder
 RUN useradd --create-home --shell /bin/bash --base-dir /home mozc_builder
