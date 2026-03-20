@@ -42,3 +42,12 @@ just a small note this can still be installed and work on modern android if you 
 in order to build arches other than arm32, check `build_mozc.py gyp --help`
 
 ---
+
+seems like google deprecated "mozc for android" in 2018 which is before "google japanese input" stops updating on google play in 2020
+
+my observation is code in OSS repo have stopped feature updates in around 2016, as you can see the app looks identical to a build of "google japanese input" in 2016 (except online dictionary updating feature and telemetry options)
+
+for the gplay ver, google later added better theme support and revamped ui, and it has higher target api (Android 11)
+the theme stuff looks the same as in gboard, and similar to what is already implemented in Fcitx5-Android today
+
+---
