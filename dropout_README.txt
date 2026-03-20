@@ -8,7 +8,7 @@ so far they're:
  * bumping targetSdk to Android 7 (no other code change required)
    tested to install and work just fine on Android 16
 
-note that the fdroid packaging and archlinux `fcitx5-mozc` packaging included "not really FOSS licensed" zipcode dictionary files, however these are actually free to redistribute and modify
+note that the fdroid packaging and archlinux `fcitx5-mozc` packaging included "not really FOSS licensed" zipcode dictionary files, however these are actually not copyrighted, free to redistribute and modify
 moreover these dictionaries are not useful unless you live in japan, IMO
 
 there are actually some cool FOSS alternatives to "Mozc for Android", so this repo is for who wanna stick with it for all kind of reasons ^^;
