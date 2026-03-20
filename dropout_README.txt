@@ -16,6 +16,8 @@ todo list, some are non-trivial:
  * sync mozc and dict updates from upstream
  * update emoji and kaomoji tables
  * material 3
+ * add github ci
+ * system light/dark mode handling
 
 note that the fdroid packaging and archlinux `fcitx5-mozc` packaging included "not really FOSS licensed" zipcode dictionary files, however these are actually not copyrighted, free to redistribute and modify
 moreover these dictionaries are not useful unless you live in japan, IMO
