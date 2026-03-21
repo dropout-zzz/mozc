@@ -98,3 +98,19 @@ in ./src/android/gen, grab these:
 simply copy those files into your src/android/src
 
 ---
+
+issues:
+ * "This app was built for an older version of Android" warning
+   but the app IS working as expected and its misleading.
+   this can be suppressed by bumping target api to 28.
+   it works, but that would cause a ui bug.
+   need to figure out why.
+
+ * localizations for many languages exist in tree
+   but not compiled for some reasons
+
+bugs to fix:
+ * "Next" button in "Please change input method to Mozc" popup
+   sometimes does not bring up system settings.
+
+---
